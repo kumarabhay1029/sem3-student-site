@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IGNOU BCA Semester 3 | Student Group Initiative</title>
+  <link rel="stylesheet" href="css-demo.css">
+  <link rel="icon" href="Logo.png" type="image/png">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#2196f3">
+  <meta name="description" content="IGNOU BCA Semester 3 student-led group focused on programming, logic building, study materials, and collaborative learning.">
+  <!-- Prism.js for code syntax highlighting -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <!-- Confetti celebration library -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+  <!-- Header, with AI Assistance glowing button for dual UI -->
+  <header>
+    <img src="Logo.png" alt="Group Logo" class="logo-img">
+    <h1>IGNOU BCA Semester 3 Student Group Initiative</h1>
+    <p class="subtitle">Learn. Lead. Grow Together.</p>
+    <button id="darkModeToggle" title="Toggle dark mode">🌙</button>
+    <button id="aiModeToggle" class="ai-glow-btn" title="Switch to AI Techy Mode" aria-label="AI Assistance">
+      <span class="ai-fire"></span> AI Assistance
+    </button>
+  </header>
+
+  <!-- Dashboard Widgets (Automated) -->
+  <section class="dashboard glass-card">
+    <div class="dashboard-widget">
+      <span class="widget-title">👥 Members</span>
+      <span id="widget-members">--</span>
+    </div>
+    <div class="dashboard-widget">
+      <span class="widget-title">📚 Notes</span>
+      <span id="widget-notes">--</span>
+    </div>
+    <div class="dashboard-widget">
+      <span class="widget-title">🏆 Badges</span>
+      <span id="widget-badges">--</span>
+    </div>
+    <div class="dashboard-widget">
+      <span class="widget-title">🟢 Active Now</span>
+      <span id="widget-active">--</span>
+    </div>
+  </section>
+
+  <!-- Sticky Nav / Animated Cards (AI Mode) -->
+  <nav class="sticky-nav" id="main-nav" role="navigation" aria-label="Main Navigation">
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#plan">Study Plan</a></li>
+      <li><a href="#join-form">Join</a></li>
+      <li><a href="#notes-list">Notes</a></li>
+      <li><a href="#contributor">Contributors</a></li>
+      <li><a href="#policies">Rules</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#feedback">Feedback</a></li>
+      <li><a href="#progress-tracker">Progress</a></li>
+      <li><a href="#activity-feed">Activity</a></li>
+    </ul>
+  </nav>
+  <div id="ai-nav-cards" style="display:none;">
+    <!-- JS will generate quick-access animated cards in AI mode -->
+  </div>
+
+  <!-- Announcement Scroller (Automated) -->
+  <div class="techy-scroller">
+    <div class="scroll-text" id="announcements">
+      <!-- JS will auto-update this with joins, note uploads, etc. -->
+      Loading announcements...
+    </div>
+  </div>
+
+  <main role="main">
+    <!-- About Section -->
+    <section id="about" class="glass-card">
+      <h2>📘 About the Group</h2>
+      <p>
+        This student-led initiative is for serious Semester 3 IGNOU BCA learners. We focus on collaborative learning, logic, and practical programming (C, C++, Python, DBMS, OS).
+      </p>
+      <div class="callout info">
+        <strong>Tip:</strong> Stay active and ask questions—participation helps everyone learn!
+      </div>
+    </section>
+
+    <!-- Admin Team Roles -->
+    <section class="glass-card">
+      <h2>👥 Admin Team Roles</h2>
+      <ul>
+        <li><strong>Lead Admin:</strong> Manages group structure, strategy, and discipline.</li>
+        <li><strong>Content Admin:</strong> Shares weekly material/resources.</li>
+        <li><strong>Engagement Admin:</strong> Welcomes members and boosts participation.</li>
+      </ul>
+      <p class="note">Admins ensure a friendly, focused environment.</p>
+    </section>
+
+    <!-- Study Plan -->
+    <section id="plan" class="glass-card">
+      <h2>📅 Weekly Study Plan</h2>
+      <ul>
+        <li><strong>Monday:</strong> Concept Day – Learn/share one key topic</li>
+        <li><strong>Tuesday:</strong> Logic Questions (C/C++)</li>
+        <li><strong>Wednesday:</strong> Programming Practice</li>
+        <li><strong>Thursday:</strong> Assignment Help</li>
+        <li><strong>Friday:</strong> Voice Doubt Session</li>
+        <li><strong>Saturday:</strong> Mini Project / Group Challenge</li>
+        <li><strong>Sunday:</strong> Weekly Recap & Motivation</li>
+      </ul>
+      <div class="callout syllabus">
+        <strong>Syllabus focus:</strong> We cover all topics from IGNOU BCA Semester 3.
+      </div>
+    </section>
+
+    <!-- Join Form (Embedded or Popout in AI Mode) -->
+    <section id="join-form" class="glass-card">
+      <h2>📝 Join Our Student Group</h2>
+      <p>Fill out the form to officially join.</p>
+      <div id="join-form-embed">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeEbGZlALuNxoOdUq6VpRK2pS5mi2znI-DbgNgiQ20aUumH_Q/viewform?embedded=true" width="100%" height="600" frameborder="0" title="Group Join Form">Loading…</iframe>
+      </div>
+    </section>
+
+    <!-- Contributor Leaderboard (Automated) -->
+    <section id="contributor" class="glass-card">
+      <h2>🏅 Contributor Leaderboard</h2>
+      <table id="leaderboard-table">
+        <thead>
+          <tr>
+            <th>Contributor</th>
+            <th>Badge</th>
+            <th>Contributions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- JS will auto-populate from badges.json & notes.json -->
+        </tbody>
+      </table>
+      <div class="callout tip">
+        <strong>Earn badges:</strong> Contribute notes, help peers, or organize sessions!
+      </div>
+    </section>
+
+    <!-- Rules/Policies -->
+    <section id="policies" class="glass-card">
+      <h2>📌 Group Policies</h2>
+      <ul>
+        <li>Respect everyone and keep the space distraction-free</li>
+        <li>Only study-related discussions</li>
+        <li>No AI-generated answers for assignments</li>
+        <li>No off-topic messages. Removal if violated.</li>
+        <li>Stay active and contribute</li>
+      </ul>
+      <div class="callout warning">
+        <strong>Warning:</strong> Breaking rules = warning or removal.
+      </div>
+    </section>
+
+    <!-- Skills/Outcomes -->
+    <section id="skills" class="glass-card">
+      <h2>🎯 What You'll Learn</h2>
+      <ul>
+        <li>Technical: C, C++, Python, DBMS, OS</li>
+        <li>Soft skills: leadership, teamwork, communication</li>
+        <li>Discipline and consistency</li>
+        <li>Experience in managing learning communities</li>
+      </ul>
+      <div class="callout success">
+        <strong>Outcome:</strong> Gain IT and teamwork skills for real success.
+      </div>
+    </section>
+
+    <!-- Notes/Resources Section (Automated, Scrollable, GTech Style) -->
+    <section id="notes-list" class="glass-card">
+      <h2>📚 Shared Notes</h2>
+      <input type="text" id="notes-search" placeholder="Search notes by topic/course..." aria-label="Search notes">
+      <ul id="notes-ul">
+        <!-- JS auto-loads approved notes here -->
+      </ul>
+      <p>
+        <a href="https://forms.gle/6ANP6p7xSeMZpKKA7" target="_blank">
+          <button>Upload Notes</button>
+        </a>
+      </p>
+      <div class="callout syllabus">
+        <strong>Info:</strong> Only approved notes are listed. <span class="new-badge">New</span> notes are highlighted!
+      </div>
+    </section>
+
+    <!-- Progress Tracker -->
+    <section id="progress-tracker" class="glass-card">
+      <h2>📈 Progress Tracker</h2>
+      <ul>
+        <li><label><input type="checkbox" class="syllabus-check"> C Programming – Pointers</label></li>
+        <li><label><input type="checkbox" class="syllabus-check"> DBMS – Normalization</label></li>
+        <li><label><input type="checkbox" class="syllabus-check"> OS – Memory Management</label></li>
+        <li><label><input type="checkbox" class="syllabus-check"> Python – File Handling</label></li>
+      </ul>
+      <p id="progress-status"></p>
+    </section>
+
+    <!-- Activity Feed -->
+    <section id="activity-feed" class="glass-card">
+      <h2>📰 Activity Feed</h2>
+      <ul id="activity-list">
+        <!-- JS will show group activity here -->
+      </ul>
+    </section>
+
+    <!-- Feedback -->
+    <section id="feedback" class="glass-card">
+      <h2>💬 Feedback & Suggestions</h2>
+      <form id="feedback-form" autocomplete="off">
+        <label for="feedback-input">Share feedback, thank a contributor, or suggest improvements:</label><br>
+        <textarea id="feedback-input" rows="2" required style="width:100%;max-width:650px;"></textarea><br>
+        <button type="submit">Send</button>
+      </form>
+      <ul id="feedback-list" class="feedback-list">
+        <!-- Feedback displays here -->
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 IGNOU BCA Student Initiative | Designed by Abhay Kumar
+    <br>
+    <a href="#top" style="color:#fff;text-decoration:underline;font-size:0.95em;">Back to Top ↑</a>
+  </footer>
+
+  <!-- Floating Join Button -->
+  <a href="#join-form" class="fab-button" title="Join Now" aria-label="Join Now">➕</a>
+
+  <!-- Scripts for interactivity, dual UI, automation, voice, etc. -->
+  <script src="js/ai-mode.js"></script>
+  <script src="js/widgets.js"></script>
+  <script src="js/announcements.js"></script>
+  <script src="js/leaderboard.js"></script>
+  <script src="js/notes.js"></script>
+  <script src="js/progress.js"></script>
+  <script src="js/feedback.js"></script>
+  <script>
+    // PWA support
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js');
+    }
+  </script>
+</body>
+</html>
