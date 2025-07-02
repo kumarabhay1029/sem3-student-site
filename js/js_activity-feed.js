@@ -43,8 +43,9 @@ async function renderActivityFeed() {
       : act.type === 'announcement' ? '📢'
       : act.type === 'join' ? '👋'
       : '📰';
+    // Teaching-based: Always use the field name exactly as in your data (here: description)
     return `<li>
-      ${icon} ${act.message}
+      ${icon} ${act.description}
       <span style="font-size:0.92em;color:#888;margin-left:9px;">${formatTime(act.timestamp)}</span>
     </li>`;
   }).join('');
