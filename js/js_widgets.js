@@ -1,5 +1,5 @@
 // widgets.js
-// Automates dashboard stats: Members, Notes, Badges, Active Now
+// Automates dashboard stats: Members, Notes, Badges, Active Now (teaching-style, syllabus-based)
 
 // Helper: Fetch JSON (teaching-based: simple, extensible)
 async function fetchJSON(url) {
@@ -26,15 +26,16 @@ async function updateNotesWidget() {
   document.getElementById('widget-notes').textContent = approvedNotes.length || '--';
 }
 
-// 3. Update Badges count from badges.json (unique badge types)
+// 3. Update Badges count from badges.json (unique badge types, syllabus-style)
 async function updateBadgesWidget() {
   const data = await fetchJSON('data/badges.json');
+  // Each badge is a type; count unique badge names
   const badgeSet = new Set();
-  data.forEach(user => (user.badges || []).forEach(b => badgeSet.add(b)));
+  data.forEach(badge => badgeSet.add(badge.name));
   document.getElementById('widget-badges').textContent = badgeSet.size || '--';
 }
 
-// 4. Simulate "Active Now" (random for demo, replace with real logic as needed)
+// 4. Simulate "Active Now" (random for demo, can be replaced with real logic)
 let activeNowSim = 3 + Math.floor(Math.random() * 6);
 document.getElementById('widget-active').textContent = activeNowSim;
 
@@ -43,7 +44,7 @@ updateMembersWidget();
 updateNotesWidget();
 updateBadgesWidget();
 
-// Teaching tip: Use setInterval or WebSocket for live updates if you want "real-time"
+// (Teaching tip) Use setInterval for live updates if you want "real-time" dashboard
 setInterval(() => {
   // Optionally refresh widgets every 60s for new data
   updateMembersWidget();
