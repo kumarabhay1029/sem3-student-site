@@ -168,6 +168,14 @@ section {
   transform: scale(1.03) rotateZ(-1deg);
   box-shadow: 0 8px 32px #2196f399;
 }
+.badge-img {
+  width: 48px;
+  height: auto;
+  margin-right: 8px;
+  vertical-align: middle;
+  border-radius: 6px;
+  box-shadow: 0 1px 6px #2196f333;
+}
 section h2 {
   font-size: 1.26rem;
   margin-bottom: 14px;
