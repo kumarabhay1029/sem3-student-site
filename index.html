@@ -16,8 +16,9 @@
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 </head>
 <body>
-  <!-- Header with AI Mode toggle (fire glowing button) and standard dark mode toggle -->
+  <!-- Header with Banner and AI/Dark Mode toggles -->
   <header>
+    <img src="assets/banner_sem3.png" alt="Semester 3 Group Banner" class="banner-img">
     <img src="Logo.png" alt="Group Logo" class="logo-img">
     <h1>IGNOU BCA Semester 3 Student Group Initiative</h1>
     <p class="subtitle">Learn. Lead. Grow Together.</p>
@@ -69,7 +70,6 @@
   <!-- Automated Announcement Scroller -->
   <div class="techy-scroller">
     <div class="scroll-text" id="announcements">
-      <!-- JS will auto-update announcements for joins, notes, and contributors -->
       Loading announcements...
     </div>
   </div>
@@ -86,13 +86,22 @@
       </div>
     </section>
 
-    <!-- Admin Team Roles -->
+    <!-- Admin Team Roles with Asset Badges -->
     <section class="glass-card">
       <h2>👥 Admin Team Roles</h2>
       <ul>
-        <li><strong>Lead Admin:</strong> Manages structure, strategy, and discipline.</li>
-        <li><strong>Content Admin:</strong> Shares weekly material/resources.</li>
-        <li><strong>Engagement Admin:</strong> Welcomes members, boosts participation.</li>
+        <li>
+          <img src="assets/lead_admin_badge.png" alt="Lead Admin Badge" class="badge-img" />
+          <strong>Lead Admin:</strong> Manages structure, strategy, and discipline.
+        </li>
+        <li>
+          <img src="assets/content_admin_badge.png" alt="Content Admin Badge" class="badge-img" />
+          <strong>Content Admin:</strong> Shares weekly material/resources.
+        </li>
+        <li>
+          <img src="assets/engagement_admin_badge.png" alt="Engagement Admin Badge" class="badge-img" />
+          <strong>Engagement Admin:</strong> Welcomes members, boosts participation.
+        </li>
       </ul>
       <p class="note">Admins ensure a friendly, focused environment.</p>
     </section>
