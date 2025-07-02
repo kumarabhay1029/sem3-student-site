@@ -1,0 +1,21 @@
+{
+  "name": "IGNOU BCA Sem 3 Group",
+  "short_name": "BCA3Group",
+  "description": "IGNOU BCA Semester 3 student-led learning PWA",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#f6f8fa",
+  "theme_color": "#2196f3",
+  "icons": [
+    {
+      "src": "Logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "Logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
