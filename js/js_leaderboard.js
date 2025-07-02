@@ -12,25 +12,42 @@ async function fetchJSON(url) {
   }
 }
 
-// Count contributions for each user by combining notes and badges
+// Build leaderboard: contributors, their badges, and their note contributions
 async function buildLeaderboard() {
   const notes = await fetchJSON('data/notes.json');
   const badges = await fetchJSON('data/badges.json');
-  // Count notes per contributor
-  const noteCounts = {};
+
+  // 1. Get all unique users from notes (uploader) and from badges (awardedTo)
+  const userSet = new Set();
   notes.forEach(n => {
-    if (n.contributor) {
-      noteCounts[n.contributor] = (noteCounts[n.contributor] || 0) + 1;
-    }
+    if (n.uploader) userSet.add(n.uploader);
   });
-  // Build leaderboard data
-  const leaderboard = badges.map(user => ({
-    name: user.user,
-    badges: user.badges || [],
-    contributions: noteCounts[user.user] || 0
-  }));
-  // Sort by most contributions
-  leaderboard.sort((a, b) => b.contributions - a.contributions);
+  badges.forEach(badge => {
+    (badge.awardedTo || []).forEach(user => userSet.add(user));
+  });
+
+  // 2. For each user, count their approved notes and collect badges
+  const leaderboard = Array.from(userSet).map(name => {
+    // Count approved notes
+    const noteCount = notes.filter(n => n.uploader === name && n.approved).length;
+    // Collect badges they earned
+    const userBadges = badges
+      .filter(b => (b.awardedTo || []).includes(name))
+      .map(b => b.name);
+
+    return {
+      name,
+      badges: userBadges,
+      contributions: noteCount
+    };
+  });
+
+  // 3. Sort: most contributions first, then most badges
+  leaderboard.sort((a, b) => 
+    b.contributions !== a.contributions
+      ? b.contributions - a.contributions
+      : b.badges.length - a.badges.length
+  );
 
   return leaderboard;
 }
@@ -40,10 +57,12 @@ async function renderLeaderboard() {
   const tbody = document.querySelector('#leaderboard-table tbody');
   if (!tbody) return;
   const data = await buildLeaderboard();
+
   if (!data.length) {
     tbody.innerHTML = '<tr><td colspan="3">No contributors yet.</td></tr>';
     return;
   }
+
   // Highlight top contributor
   const rows = data.map((row, i) => `
     <tr${i === 0 ? ' style="background:#e0f7fa;font-weight:bold;"' : ''}>
@@ -60,5 +79,5 @@ async function renderLeaderboard() {
 }
 renderLeaderboard();
 
-// Optionally, refresh every 2 minutes
+// Optionally, refresh every 2 minutes for live updates
 setInterval(renderLeaderboard, 2 * 60 * 1000);
