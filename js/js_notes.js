@@ -53,9 +53,9 @@ async function renderNotes(filter = "") {
       isNew = diffDays <= 7;
     }
     return `<li>
-      <a href="${note.uploadLink}" target="_blank">
+      <a href="${note.link}" target="_blank">
         ${note.courseCode ? `<b>${note.courseCode}</b> - ` : ""}${note.topic}
-        ${note.contributor ? ` <span style="font-size:0.95em;color:#2196f3;">by ${note.contributor}</span>` : ""}
+        ${note.uploader ? ` <span style="font-size:0.95em;color:#2196f3;">by ${note.uploader}</span>` : ""}
       </a>
       ${isNew ? '<span class="new-badge">New</span>' : ''}
       <span style="font-size:0.9em;color:#888;">${formatDate(note.timestamp)}</span>
