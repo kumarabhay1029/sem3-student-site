@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "user": "Anjali Sharma",
+    "message": "Thanks for the wonderful group sessions! The shared notes are very helpful.",
+    "timestamp": "2024-06-24T18:15:00Z"
+  },
+  {
+    "id": 2,
+    "user": "Rishabh Arora",
+    "message": "Can we have more Python programming challenges?",
+    "timestamp": "2024-06-26T10:25:00Z"
+  },
+  {
+    "id": 3,
+    "user": "Abhay Kumar",
+    "message": "Great job by everyone in sharing resources and participating actively.",
+    "timestamp": "2024-06-27T19:30:00Z"
+  },
+  {
+    "id": 4,
+    "user": "You?",
+    "message": "Excited to join and contribute!",
+    "timestamp": "2024-06-29T08:05:00Z"
+  }
+]

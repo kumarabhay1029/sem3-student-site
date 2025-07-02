@@ -1,0 +1,34 @@
+[
+  {
+    "userId": 1,
+    "name": "Abhay Kumar",
+    "points": 150,
+    "rank": 1,
+    "contributions": 15,
+    "lastActive": "2024-06-29T19:45:00Z"
+  },
+  {
+    "userId": 2,
+    "name": "Rishabh Arora",
+    "points": 90,
+    "rank": 2,
+    "contributions": 9,
+    "lastActive": "2024-06-28T18:20:00Z"
+  },
+  {
+    "userId": 3,
+    "name": "Anjali Sharma",
+    "points": 70,
+    "rank": 3,
+    "contributions": 7,
+    "lastActive": "2024-06-27T13:10:00Z"
+  },
+  {
+    "userId": 4,
+    "name": "You?",
+    "points": 0,
+    "rank": 4,
+    "contributions": 0,
+    "lastActive": ""
+  }
+]

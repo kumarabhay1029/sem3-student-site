@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "course": "MCS-202",
+    "topic": "C Programming – Pointers",
+    "completedBy": ["Abhay Kumar", "Rishabh Arora"],
+    "totalMembers": 4,
+    "lastUpdated": "2024-06-29T15:30:00Z"
+  },
+  {
+    "id": 2,
+    "course": "BCSL-203",
+    "topic": "DBMS – Normalization",
+    "completedBy": ["Abhay Kumar"],
+    "totalMembers": 4,
+    "lastUpdated": "2024-06-28T13:00:00Z"
+  },
+  {
+    "id": 3,
+    "course": "MCS-204",
+    "topic": "OS – Memory Management",
+    "completedBy": ["Anjali Sharma"],
+    "totalMembers": 4,
+    "lastUpdated": "2024-06-27T19:45:00Z"
+  },
+  {
+    "id": 4,
+    "course": "MCS-205",
+    "topic": "Python – File Handling",
+    "completedBy": [],
+    "totalMembers": 4,
+    "lastUpdated": ""
+  }
+]

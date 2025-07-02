@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "courseCode": "MCS-202",
+    "topic": "Pointers in C",
+    "uploader": "Abhay Kumar",
+    "link": "https://drive.google.com/file/d/abc123/view",
+    "approved": true,
+    "timestamp": "2024-06-27T14:20:00Z"
+  },
+  {
+    "id": 2,
+    "courseCode": "BCSL-203",
+    "topic": "DBMS ER Diagrams",
+    "uploader": "Rishabh Arora",
+    "link": "https://drive.google.com/file/d/def456/view",
+    "approved": true,
+    "timestamp": "2024-06-25T11:00:00Z"
+  },
+  {
+    "id": 3,
+    "courseCode": "MCS-204",
+    "topic": "Operating System Memory Management",
+    "uploader": "Anjali Sharma",
+    "link": "https://drive.google.com/file/d/ghi789/view",
+    "approved": true,
+    "timestamp": "2024-06-22T09:15:00Z"
+  },
+  {
+    "id": 4,
+    "courseCode": "MCS-205",
+    "topic": "Python File Handling",
+    "uploader": "Abhay Kumar",
+    "link": "https://drive.google.com/file/d/jkl012/view",
+    "approved": true,
+    "timestamp": "2024-06-21T17:40:00Z"
+  },
+  {
+    "id": 5,
+    "courseCode": "MCS-202",
+    "topic": "C Functions & Recursion",
+    "uploader": "You?",
+    "link": "",
+    "approved": false,
+    "timestamp": "2024-06-28T12:00:00Z"
+  }
+]

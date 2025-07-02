@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "name": "Abhay Kumar",
+    "role": "Lead Admin",
+    "joined": "2024-05-01",
+    "badges": ["Active Member", "Founder"],
+    "contributions": 15
+  },
+  {
+    "id": 2,
+    "name": "Rishabh Arora",
+    "role": "Co-Admin (Manager)",
+    "joined": "2024-05-02",
+    "badges": ["Group Supporter"],
+    "contributions": 9
+  },
+  {
+    "id": 3,
+    "name": "Anjali Sharma",
+    "role": "Content Contributor",
+    "joined": "2024-05-04",
+    "badges": ["Study Partner"],
+    "contributions": 7
+  },
+  {
+    "id": 4,
+    "name": "You?",
+    "role": "Become one today",
+    "joined": "2024-05-10",
+    "badges": [],
+    "contributions": 0
+  }
+]

@@ -1,0 +1,30 @@
+[
+  {
+    "badgeId": 1,
+    "name": "Active Member",
+    "description": "Awarded for being consistently active in group discussions and activities.",
+    "awardedTo": ["Abhay Kumar"],
+    "dateAwarded": "2024-05-15"
+  },
+  {
+    "badgeId": 2,
+    "name": "Founder",
+    "description": "Given to the creator(s) of the group.",
+    "awardedTo": ["Abhay Kumar"],
+    "dateAwarded": "2024-05-01"
+  },
+  {
+    "badgeId": 3,
+    "name": "Group Supporter",
+    "description": "For helping new members and maintaining a positive atmosphere.",
+    "awardedTo": ["Rishabh Arora"],
+    "dateAwarded": "2024-05-20"
+  },
+  {
+    "badgeId": 4,
+    "name": "Study Partner",
+    "description": "Awarded for collaborating on study sessions and sharing materials.",
+    "awardedTo": ["Anjali Sharma"],
+    "dateAwarded": "2024-06-01"
+  }
+]
