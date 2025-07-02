@@ -1,7 +1,7 @@
 // js/announcements.js
 // Automates the announcements scroller with group activity and contributor highlights
 
-// Teaching-based: You can connect this to real data, Google Sheets, or a backend later.
+// Helper: fetch JSON data
 async function fetchJSON(url) {
   try {
     const r = await fetch(url);
@@ -13,37 +13,45 @@ async function fetchJSON(url) {
   }
 }
 
-// Demo: Build announcement messages from JSON data
+// Build announcement messages from JSON data
 async function buildAnnouncements() {
   const members = await fetchJSON('data/members.json');
   const notes = await fetchJSON('data/notes.json');
   const badges = await fetchJSON('data/badges.json');
   let messages = [];
 
-  // Welcome new members (last 3)
+  // Welcome new members (last 3 by join date)
   members.slice(-3).forEach(m =>
     messages.push(`👋 Welcome <b>${m.name}</b> to the group!`)
   );
 
-  // New notes (last 2)
-  notes.slice(-2).forEach(n =>
-    messages.push(`📝 New notes: <b>${n.topic}</b> by ${n.contributor}`)
-  );
+  // New notes (last 2, only approved)
+  notes.filter(n => n.approved)
+    .slice(-2)
+    .forEach(n =>
+      messages.push(`📝 New notes: <b>${n.topic}</b> by ${n.uploader}`)
+    );
 
-  // Top contributor (most badges or most notes)
-  let topContributor = null;
-  let topCount = 0;
-  badges.forEach(b => {
-    if ((b.badges || []).length > topCount) {
-      topContributor = b.user;
-      topCount = b.badges.length;
-    }
+  // Top contributor (most badge awards)
+  // Teaching example: Count how many times each member appears in all badges' awardedTo arrays
+  const badgeCounts = {};
+  badges.forEach(badge => {
+    (badge.awardedTo || []).forEach(user => {
+      badgeCounts[user] = (badgeCounts[user] || 0) + 1;
+    });
   });
+  let topContributor = null, topCount = 0;
+  for (const user in badgeCounts) {
+    if (badgeCounts[user] > topCount) {
+      topContributor = user;
+      topCount = badgeCounts[user];
+    }
+  }
   if (topContributor) {
     messages.push(`🏆 Most active contributor: <b>${topContributor}</b>`);
   }
 
-  // Fallback/default
+  // Fallback/default message
   if (!messages.length) {
     messages.push("🚀 Welcome to IGNOU BCA Semester 3 Group! | Stay active, keep learning!");
   }
