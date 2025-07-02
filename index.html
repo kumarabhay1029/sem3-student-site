@@ -16,7 +16,7 @@
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 </head>
 <body>
-  <!-- Header, with AI Assistance glowing button for dual UI -->
+  <!-- Header with AI Mode toggle (fire glowing button) and standard dark mode toggle -->
   <header>
     <img src="Logo.png" alt="Group Logo" class="logo-img">
     <h1>IGNOU BCA Semester 3 Student Group Initiative</h1>
@@ -27,7 +27,7 @@
     </button>
   </header>
 
-  <!-- Dashboard Widgets (Automated) -->
+  <!-- Dashboard Widgets (automated, connect to your data source) -->
   <section class="dashboard glass-card">
     <div class="dashboard-widget">
       <span class="widget-title">👥 Members</span>
@@ -47,7 +47,7 @@
     </div>
   </section>
 
-  <!-- Sticky Nav / Animated Cards (AI Mode) -->
+  <!-- Navigation (standard and AI card nav for techy mode) -->
   <nav class="sticky-nav" id="main-nav" role="navigation" aria-label="Main Navigation">
     <ul>
       <li><a href="#about">About</a></li>
@@ -66,10 +66,10 @@
     <!-- JS will generate quick-access animated cards in AI mode -->
   </div>
 
-  <!-- Announcement Scroller (Automated) -->
+  <!-- Automated Announcement Scroller -->
   <div class="techy-scroller">
     <div class="scroll-text" id="announcements">
-      <!-- JS will auto-update this with joins, note uploads, etc. -->
+      <!-- JS will auto-update announcements for joins, notes, and contributors -->
       Loading announcements...
     </div>
   </div>
@@ -79,7 +79,7 @@
     <section id="about" class="glass-card">
       <h2>📘 About the Group</h2>
       <p>
-        This student-led initiative is for serious Semester 3 IGNOU BCA learners. We focus on collaborative learning, logic, and practical programming (C, C++, Python, DBMS, OS).
+        Student-led group for IGNOU BCA Semester 3. Focused on collaborative learning, logic building, and practical programming (C, C++, Python, DBMS, OS).
       </p>
       <div class="callout info">
         <strong>Tip:</strong> Stay active and ask questions—participation helps everyone learn!
@@ -90,9 +90,9 @@
     <section class="glass-card">
       <h2>👥 Admin Team Roles</h2>
       <ul>
-        <li><strong>Lead Admin:</strong> Manages group structure, strategy, and discipline.</li>
+        <li><strong>Lead Admin:</strong> Manages structure, strategy, and discipline.</li>
         <li><strong>Content Admin:</strong> Shares weekly material/resources.</li>
-        <li><strong>Engagement Admin:</strong> Welcomes members and boosts participation.</li>
+        <li><strong>Engagement Admin:</strong> Welcomes members, boosts participation.</li>
       </ul>
       <p class="note">Admins ensure a friendly, focused environment.</p>
     </section>
@@ -101,7 +101,7 @@
     <section id="plan" class="glass-card">
       <h2>📅 Weekly Study Plan</h2>
       <ul>
-        <li><strong>Monday:</strong> Concept Day – Learn/share one key topic</li>
+        <li><strong>Monday:</strong> Concept Day</li>
         <li><strong>Tuesday:</strong> Logic Questions (C/C++)</li>
         <li><strong>Wednesday:</strong> Programming Practice</li>
         <li><strong>Thursday:</strong> Assignment Help</li>
@@ -110,20 +110,20 @@
         <li><strong>Sunday:</strong> Weekly Recap & Motivation</li>
       </ul>
       <div class="callout syllabus">
-        <strong>Syllabus focus:</strong> We cover all topics from IGNOU BCA Semester 3.
+        <strong>Syllabus focus:</strong> All topics from IGNOU BCA Semester 3.
       </div>
     </section>
 
-    <!-- Join Form (Embedded or Popout in AI Mode) -->
+    <!-- Join Form (embedded and pop out in AI mode) -->
     <section id="join-form" class="glass-card">
       <h2>📝 Join Our Student Group</h2>
-      <p>Fill out the form to officially join.</p>
+      <p>Fill out the form to join officially.</p>
       <div id="join-form-embed">
         <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeEbGZlALuNxoOdUq6VpRK2pS5mi2znI-DbgNgiQ20aUumH_Q/viewform?embedded=true" width="100%" height="600" frameborder="0" title="Group Join Form">Loading…</iframe>
       </div>
     </section>
 
-    <!-- Contributor Leaderboard (Automated) -->
+    <!-- Contributor Leaderboard (automated) -->
     <section id="contributor" class="glass-card">
       <h2>🏅 Contributor Leaderboard</h2>
       <table id="leaderboard-table">
@@ -139,7 +139,7 @@
         </tbody>
       </table>
       <div class="callout tip">
-        <strong>Earn badges:</strong> Contribute notes, help peers, or organize sessions!
+        <strong>Earn badges:</strong> Contribute notes, help peers, organize sessions!
       </div>
     </section>
 
@@ -172,7 +172,7 @@
       </div>
     </section>
 
-    <!-- Notes/Resources Section (Automated, Scrollable, GTech Style) -->
+    <!-- Notes/Resources Section (automated, scrollable, GTech style) -->
     <section id="notes-list" class="glass-card">
       <h2>📚 Shared Notes</h2>
       <input type="text" id="notes-search" placeholder="Search notes by topic/course..." aria-label="Search notes">
